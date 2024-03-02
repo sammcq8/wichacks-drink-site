@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { quiz } from '../data/coffeequestionset';
 import ScoreCard from './scorecard';
-import { cookies } from 'next/headers';
 import { setCookie } from "cookies-next";
 
 
@@ -15,9 +14,6 @@ const Quiz = ({ name }) => {
     const [showResults, setShowResults] = useState(false);
     const [quizResult, setQuizResult] = useState({
         attributes: [],
-        score:0,
-        correctAnswers: 0,
-        wrongAnswers: 0,
     });
 
     const { questions } = quiz;

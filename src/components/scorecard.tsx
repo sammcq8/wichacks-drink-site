@@ -16,7 +16,7 @@ const ScoreCard = ({ quizResult, questions, name }) => {
                     </ul>
                     <tbody>
                         {quizResult.attributes.map((answer, idx) => (
-                            <tr>
+                            <tr key={'raw_result' + idx}>
                                 <td>{answer}</td>
                             </tr>
                         ))}

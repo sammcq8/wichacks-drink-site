@@ -12,9 +12,6 @@ const Quiz = ({ name }) => {
     const [showResults, setShowResults] = useState(false);
     const [quizResult, setQuizResult] = useState({
         attributes: [],
-        score:0,
-        correctAnswers: 0,
-        wrongAnswers: 0,
     });
 
     const { questions } = quiz;

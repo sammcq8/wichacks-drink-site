@@ -1,8 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/typescript/node_modules
-/wichacks2024/node_modules
+/node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
@@ -11,10 +10,8 @@
 /coverage
 
 # next.js
-/typescript/.next/
-/wichacks2024/.next/
-/typescript/out/
-/wichacks2024/out/
+/.next/
+/out/
 
 # production
 /build
@@ -37,4 +34,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-

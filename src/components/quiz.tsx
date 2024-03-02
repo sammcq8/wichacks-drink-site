@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { quiz } from '../data/coffeequestionset';
 import ScoreCard from './scorecard';
+import { cookies } from 'next/headers';
+import { setCookie } from "cookies-next";
+
 
 const Quiz = ({ name }) => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -37,6 +40,7 @@ const Quiz = ({ name }) => {
             setCurrentQuestionIndex((prev) => prev + 1);
         } else {
             setShowResults(true);
+            setCookie("coffeeAttributes", quizResult)
         }
         setSelectedAnswer('');
         setSelectedAnswerIndex(null);

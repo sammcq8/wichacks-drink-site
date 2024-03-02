@@ -2,6 +2,7 @@
 'use client'
 import { useState } from "react";
 import Quiz from "../../components/quiz";
+import { setCookie } from "cookies-next";
 
 export default function Home() {
     const [quizStarted, setQuizStarted] = useState(false);
@@ -35,7 +36,8 @@ export default function Home() {
                         />
                     </div>
                     <button
-                        onClick={() => setQuizStarted(true)}
+                        onClick={() => {setQuizStarted(true);
+                                        setCookie("name", name)}}
                         className="btn btn-primary"
                         // Disable button if name is empty or whitespace
                         disabled={!name.trim()}

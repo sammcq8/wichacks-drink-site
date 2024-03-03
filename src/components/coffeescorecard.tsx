@@ -10,16 +10,16 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
 
     const percentage = (quizResult.score / (questions.length * 5)) * 100;
     const status = percentage >= passPercentage ? 'Pass' : 'Fail';
-    const [selectedAnswer, setSelectedAnswer] = useState('');
+    const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [answerChecked, setAnswerChecked] = useState(false);
     const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
 
     const compareCoffees = (coffee: { name: string; attributes: string[]; link?: undefined; } | { name: string; link: string; attributes: string[]; }, result:any) => {
         let intersection = 0
         coffee.attributes.forEach((coffee) =>
-            result.attributes.forEach((result) =>{if(coffee == result){intersection++;}})
+            result.attributes.forEach((result) =>{if(coffee.toLowerCase() == result.toLowerCase()){intersection++;}})
         )
-        if (intersection >= 2) {
+        if (intersection >= 3) {
             return true
         }
         else{
@@ -32,6 +32,8 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
         setSelectedAnswer(answer);
         setAnswerChecked(true);
     };
+
+    const womanOwned = (attributes) => {return attributes.filter(attribute => attribute === "woman owned").length > 0}
 
     return (
         <>
@@ -58,7 +60,8 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
                     <table className='table'>
 
                         <tbody>
-                            {coffees.coffees.map((coffee, idx) => {
+                            {coffees.coffees.sort(coffee => {if(womanOwned(coffee.attributes)){return 0}
+                            else{return 3}} ).map((coffee, idx) => {
                                 if (compareCoffees(coffee, quizResult)){
                                     return (
                                         <li key={idx}
@@ -66,11 +69,11 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
                                             className={
                                                 'list-group-item ' +
                                                 (selectedAnswerIndex ===
-                                                    idx ? 'active' : '') +
+                                                    idx ? 'active' : '')  +
                                                 ' cursor-pointer'
                                             }>
-                                            <p ><a className="text-dark" href={coffee.link}>{coffee.name}</a></p>
-                                            <p >{coffee.attributes.map(coffee => coffee + ", ")}</p>
+                                            <p ><a className={"text-" + (womanOwned(coffee.attributes) && selectedAnswerIndex !== idx ? 'secondary' : 'dark')} href={coffee.link}>{(womanOwned(coffee.attributes) ? '*** ' : '') + coffee.name}</a></p>
+                                            <p > {coffee.attributes.map(coffee => coffee + ", ")}</p>
                                         </li>)
                                 }
                                 else{
@@ -88,9 +91,27 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
                     </button>
                     </div>
                 </div>
-                <div className='card p-4'>
-                    
-                </div>
+                {
+                    selectedAnswer !== null &&
+                    <div className='card p-4'>
+                        <h4>Pour over instructions:</h4>
+                        <ol>
+                            <li>Bring at least 600 grams (20 oz) of water to a boil.</li>
+                                {"Light Roast" in selectedAnswer && <li>For Light Roasts measure out 22 grams for every 350 grams water.</li>}
+                                {"Light Roast"! in selectedAnswer.attributes && <li>For Medium and Dark Roasts measure out 30 grams of coffee</li>} 
+                                <li>Grind coffee to a coarseness resembling sea salt.</li>
+                                <li>Place a filter in your pour over dripper, and pour some water over it to wet it.</li>
+                                <li>Add the ground coffee to the filter and gently tap it to level the surface of the grounds.</li>
+                            <li>Pour 60 grams of water onto the coffee grounds and let it sit for 45 seconds.</li>
+                            <li>Once the coffee has sat for 45 seconds, add another 90 grams of water, pouring in a spiral from the center. Wait an additional 45 seconds</li>
+                            <li>Repeat the previous step, adding 90 grams of water.</li>
+                            <li>Once the water has moved completely through the coffee you can pour your coffee into a cup and enjoy!</li>
+
+
+                        </ol>
+
+                    </div>
+                }
             </div>
         </>
     );

@@ -1,143 +1,238 @@
 {
-    "teas": [
+    "coffees": [
         {
-            "name": "Chamraj Golden Tips",
-            "link": "https://www.harney.com/products/chamraj-golden-tips",
-            "attributes": "[black, vegetal, high, hot]",
-            "temp": 212,
-            "duration": "5"
+            "name": "Portrait Darker the Cherry",
+            "link": "https: //www.drinktrade.com/products/darker-the-cherry?variant=standard_bag",
+            "attributes": [
+                "dark roast",
+                "milk chocolate",
+                "caffinated"
+            ]
         },
         {
-            "name": "Hot Cinnamon Spice",
-            "link": "https://www.harney.com/products/hot-cinnamon-spice-tea?variant=1339236843526",
-            "attributes": "[black, spice, high, hot]",
-            "temp": 212,
-            "duration": "5"
+            "name": "DOMA Bella Luna",
+            "link": "https://www.drinktrade.com/products/bella-luna?variant=standard_bag",
+            "attributes": [
+                "dark roast",
+                "milk chocolate",
+                "decaf"
+            ]
         },
         {
-            "name": "Paris",
-            "link": "https://www.harney.com/products/paris-tea?refSrc=4115743244359&nosto=productpage-nosto-1&variant=1339699855366",
-            "attributes": "[black, fruit, hot, iced, high]",
-            "temp": 212,
-            "duration": "4 to 5"
+            "name": "Gimme! Eternal Flame",
+            "link": "https://www.drinktrade.com/products/eternal-flame?variant=standard_bag",
+            "attributes": [
+                "dark roast",
+                "milk chocolate",
+                "vanilla",
+                "caffinated"
+            ]
         },
         {
-            "name": "sally's Secret ","link": "https://www.harney.com/products/sally-s-secret?variant=35000670214",
-            "attributes": "[black, oolong, hot, floral, high]",
-            "temp": 212,
-            "duration": "4 to 5"
+            "name": "Greater Goods Stimulate",
+            "link": "https://www.drinktrade.com/products/tips-up-tahoe-french-roast?variant=standard_bag",
+            "attributes": [
+                "dark roast",
+                "milk chocolate",
+                "citrus",
+                "caffinated"
+            ]
         },
         {
-            "name": "Peach's and Ginger (Decaf)",
-            "link": "https: //www.harney.com/products/decaf-peaches-ginger ",
-            "attributes": "[black, fruit, spice, hot, iced, caffeine free]",
-            "temp": 212,
-            "duration": "5"
+            "name": "Equator Decaf Kenya Thiriku",
+            "link": "https://www.drinktrade.com/products/decaf-kenya-thiriku?variant=standard_bag",
+            "attributes": [
+                "light roast",
+                "citrus",
+                "caramel",
+                "decaf",
+                "woman owned"
+            ]
         },
         {
-            "name": "Midsummer's Peach (Decaf)",
-            "link": "https: //www.harney.com/products/midsummer-s-peach?variant=35000193670",
-            "attributes": "[black, fruit, hot, iced, caffeine free]",
-            "temp": 212,
-            "duration": "5"
+            "name": "Highwire After Hours Decaf",
+            "link": "https://www.drinktrade.com/products/after-hours?variant=standard_bag",
+            "attributes": [
+                "light roast",
+                "medium roast",
+                "caramel",
+                "vanilla",
+                "decaf"
+            ]
         },
         {
-            "name": "Heirloom Bartlett Pear",
-            "link": "https://www.harney.com/products/heirloom-bartlett-pear?variant=953250250758",
-            "attributes": "[white, fruit, spice, low to medium, hot ]",
-            "temp": 175,
-            "duration": "4 to 5"
+            "name": "Common Voice\nPerennial Decaf",
+            "link": "https://www.drinktrade.com/products/perennial-decaf?variant=standard_bag",
+            "attributes": [
+                "light roast",
+                "medium roast",
+                "citrus",
+                "caramel",
+                "fall fruit",
+                "decaf"
+            ]
         },
         {
-            "name": "Winter White Earl Grey",
-            "link": "https://www.harney.com/products/winter-white-earl-grey?variant=35000606726",
-            "attributes": "[white, vegetal, low to medium, hot]",
-            "temp": 175,
-            "duration": "3"
+            "name": "Boxcar Decaf Colombia E.A.",
+            "link": "https://www.drinktrade.com/products/decaf-colombia-ea?variant=standard_bag",
+            "attributes": [
+                "light roast",
+                "medium roast",
+                "citrus",
+                "stonefruit",
+                "decaf"
+            ]
         },
         {
-            "name": "Dragon Pearl Jasmine",
-            "link": "https://www.harney.com/products/dragon-pearl-jasmine?refSrc=8584033094&nosto=productpage-nosto-1-copy-copy-1&variant=1339389870086",
-            "attributes": "[green, white, floral, hot, low to medium]",
-            "temp": 175,
-            "duration": "3"
+            "name": "Irving Farm Decaf Blackstrap",
+            "link": "https://www.drinktrade.com/products/decaf-blackstrap?variant=standard_bag",
+            "attributes": [
+                "dark roast",
+                "medium roast",
+                "dark chocolate",
+                "berries",
+                "decaf"
+            ]
         },
         {
-            "name": "Chinese Flower",
-            "link": "https://www.harney.com/products/chinese-flower?variant=32712415445063",
-            "attributes": "[green, floral, low to medium]",
-            "temp": 175,
-            "duration": "3"
+            "name": "Atomic Daydream Decaf",
+            "link": "https://www.drinktrade.com/products/daydream-decaf?variant=standard_bag",
+            "attributes": [
+                "dark roast",
+                "medium roast",
+                "stone fruit",
+                "milk chocolate",
+                "decaf"
+            ]
         },
         {
-            "name": "Blueberry Green",
-            "link": "https://www.harney.com/products/blueberry-green?nosto=productcategory-nosto-2&variant=35000377478",
-            "attributes": "[green, fruit, low to meduim]",
-            "temp": 175,
-            "duration": "3"
+            "name": "Cerberus Slowride Decaf",
+            "link": "https://www.drinktrade.com/products/slowride-decaf?variant=standard_bag",
+            "attributes": [
+                "dark roast",
+                "medium roast",
+                "dark chocolate",
+                "caramel",
+                "decaf"
+            ]
         },
         {
-            "name": "Jane's Garden",
-            "link": "https://www.harney.com/products/jane-s-garden-tea?refSrc=8586094278&nosto=productpage-nosto-3-copy&variant=35000593286",
-            "attributes": "[green, fruit, floral, low to medium]",
-            "temp": 175,
-            "duration": "3"
+            "name": "Huckleberry Ethiopia Basha Bekele Natural",
+            "link": "https://www.drinktrade.com/products/ethiopia-basha-bekele-natural?variant=standard_bag",
+            "attributes": [
+                "light roast",
+                "medium roast",
+                "tropical",
+                "stone fruit",
+                "berries",
+                "milk chocolate",
+                "caffinated"
+            ]
         },
         {
-            "name": "Organic Bancha",
-            "link": "https://www.harney.com/products/organic-bancha",
-            "attributes": "[green, vegetal, low to meduim]",
-            "temp": 175,
-            "duration": "1 to 2"
+            "name": "Bean & Bean Costa Rica Las Lajas Black Honey",
+            "link": "https://www.drinktrade.com/products/costa-rica-las-lajas-black-honey-2?variant=standard_bag",
+            "attributes": [
+                "light roast",
+                "medium roast",
+                "cirtus",
+                "tropical",
+                "berries",
+                "caffinated",
+                "woman owned"
+            ]
         },
         {
-            "name": "Jeju Sejak",
-            "link": "https://www.harney.com/products/jeju-sejak?variant=35000254150",
-            "attributes": "[green, vegetal, low to meduim]",
-            "temp": 175,
-            "duration": "3"
+            "name": "Dune Colombia Gerson Mora",
+            "link": "https://www.drinktrade.com/products/colombia-gerson-mora?variant=standard_bag",
+            "attributes": [
+                "light roast",
+                "tropical",
+                "stonefruit",
+                "dark chocolate",
+                "caffinated"
+            ]
         },
         {
-            "name": "Ginger's Oolong",
-            "link": "https://www.harney.com/products/ginger-s-oolong?variant=35000768646",
-            "attributes": "[oolong, spice, high]",
-            "temp": 205,
-            "duration": "4 to 5"
+            "name": nan,
+            "link": nan,
+            "attributes": [
+                "nan"
+            ]
         },
         {
-            "name": "Pomegranate Oolong",
-            "link": "https://www.harney.com/products/pomegranate-oolong?variant=35000506758",
-            "attributes": "[oolong, fruit, high]",
-            "temp": 205,
-            "duration": "4 to 5"
+            "name": "City Girl Sumatra",
+            "link": "https://www.citygirlcoffee.com/buy-coffee/organic-sumatra",
+            "attributes": [
+                "dark roast",
+                "caffinated",
+                "woman owned",
+                "dried fruit"
+            ]
         },
         {
-            "name": "Osmanthus Oolong",
-            "link": "https://www.harney.com/products/osmanthus-oolong",
-            "attributes": "[oolong, floral, high]",
-            "temp": 175,
-            "duration": "4"
+            "name": "Java Love Bad Ass Brew",
+            "link": "https://javaloveroasters.com/products/bad-ass-brew",
+            "attributes": [
+                "dark roast",
+                "caffinated",
+                "woman owned",
+                "dark chocolate",
+                "woman owned",
+                "caffinated"
+            ]
         },
         {
-            "name": "Mother's Day",
-            "link": "https://www.harney.com/products/mothers-day-1?variant=39321604948039",
-            "attributes": "[floral, caffeine free]",
-            "temp": 212,
-            "duration": "5"
+            "name": "Java Love Harvest Maple",
+            "link": "https://javaloveroasters.com/products/harvest-maple",
+            "attributes": [
+                "dark roast",
+                "caffinated",
+                "woman owned",
+                "carame"
+            ]
         },
         {
-            "name": "Mulled Plum Cider",
-            "link": "https://www.harney.com/products/mulled-plum-cider?variant=946942017542",
-            "attributes": "[fruit, spice, caffeine free]",
-            "temp": 208,
-            "duration": "5"
+            "name": "Marigold Jam on Hawthorne",
+            "link": "https://marigoldcoffee.com/collections/blends/products/jam-on-hawthorne?variant=39333130928282",
+            "attributes": [
+                "dark roast",
+                "berries",
+                "dark chocolate",
+                "caffinated",
+                "woman owned"
+            ]
         },
         {
-            "name": "Greek Mountain Herb",
-            "link": "https://www.harney.com/products/greek-mountain-herb",
-            "attributes": "[vegetal, caffeine free]",
-            "temp": 212,
-            "duration": "5"
+            "name": "Marigold Kaleidoscope",
+            "link": "https://marigoldcoffee.com/collections/blends/products/kaleidoscope-mosaic-blend?variant=39333114413210",
+            "attributes": [
+                "dark roast",
+                "dried fruit",
+                "stone fruit",
+                "caffinated",
+                "woman owned"
+            ]
+        },
+        {
+            "name": "Cafecita Marcala",
+            "link": "https://cafecitacoffee.com/products/marcala",
+            "attributes": [
+                "dark roast",
+                "medium roast",
+                "dark chocolate",
+                "caramel",
+                "woman owned"
+            ]
+        },
+        {
+            "name": "Tico Roasters Black Tiger",
+            "link": "https://www.ticoroasters.com/products/black-tiger?_pos=1&_fid=d27bb8800&_ss=c",
+            "attributes": [
+                "dark roast",
+                "dark chocolate",
+                "woman owned"
+            ]
         }
     ]
 }

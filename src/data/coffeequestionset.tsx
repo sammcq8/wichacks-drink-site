@@ -21,7 +21,7 @@ export const quiz = {
         {
             id: 5,
             question: 'What kinds of fruit do you prefer?',
-            answers: ['Melons', 'Berries', 'Stonefruit', 'Fall Fruit', 'Citrus', 'Dried Fruit'],
+            answers: ['Tropical', 'Berries', 'Stonefruit', 'Fall Fruit', 'Citrus', 'Dried Fruit' ],
         },
     ],
 };

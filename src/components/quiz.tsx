@@ -1,8 +1,8 @@
 // Quiz.js
 import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../bootstrap.min.css';
 import { quiz } from '../data/coffeequestionset';
-import ScoreCard from './scorecard';
+import CoffeeScoreCard from './coffeescorecard';
 import { setCookie } from "cookies-next";
 
 
@@ -81,7 +81,7 @@ const Quiz = ({ name }) => {
                         </div>
                     </div>
                 ) : (
-                    <ScoreCard
+                    <CoffeeScoreCard
                         quizResult={quizResult}
                         questions={questions}
                         name={name}

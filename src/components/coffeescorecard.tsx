@@ -90,7 +90,7 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
                         Restart
                     </button>
                     </div>
-                </div>
+                
                 {
                     selectedAnswer !== null &&
                     <div className='card p-4'>
@@ -112,6 +112,7 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
 
                     </div>
                 }
+                </div>
             </div>
         </>
     );

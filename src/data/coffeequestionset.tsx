@@ -4,7 +4,7 @@ export const quiz = {
         {
             id: 1,
             question: 'What caffiene level are you looking for?',
-            answers: ['Decaf', 'Normal Caffiene level'],
+            answers: ['Decaf', 'Caffinated'],
         },
 
         {
@@ -14,14 +14,14 @@ export const quiz = {
         },
         {
             id: 4,
-            question: 'What is your favorite kind of chocolate?',
+            question: 'What is your favorite kind of candy?',
             answers: ['White Chocolate', 'Milk Chocolate',
-                'Dark Chocolate'],
+                'Dark Chocolate', "Caramel", "Vanilla"],
         },
         {
             id: 5,
             question: 'What kinds of fruit do you prefer?',
-            answers: ['Melons', 'Berries', 'Stonefruit', 'Fall Fruit'],
+            answers: ['Melons', 'Berries', 'Stonefruit', 'Fall Fruit', 'Citrus', 'Dried Fruit'],
         },
     ],
 };

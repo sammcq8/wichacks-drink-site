@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <h1> Welcome to our app {name?.value}! ~alannas version~ </h1>
+        <h1> Welcome to SipSage {name?.value}! </h1>
       </div>
       <div className={styles.card}>
         <h2>Coffee</h2>

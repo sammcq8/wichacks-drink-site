@@ -25,7 +25,7 @@ export default function Home() {
         <h2>Tea</h2>
         <p>
           {teaAttributes?.value == null ? "You haven't taken the Tea Quiz yet, would you like to?" : teaAttributes?.value}
-          <Link href="/coffeequiz">Take the Tea Quiz{teaAttributes?.value == null ? "!" : " Again!"}</Link>
+          <Link href="/teaquiz">Take the Tea Quiz{teaAttributes?.value == null ? "!" : " Again!"}</Link>
 
         </p>
       </div>

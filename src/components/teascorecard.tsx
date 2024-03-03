@@ -89,6 +89,7 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
                 {
                     selectedAnswer !== null &&
                         <div className={styles.card}>
+                            <h4> Brewing Instructions</h4>
                             <ol>
                                 <li>Heat your water to {selectedAnswer.temp} °F.</li>
                                 <li>Measure 1 teaspoon of looseleaf tea per 8 oz cup.</li>

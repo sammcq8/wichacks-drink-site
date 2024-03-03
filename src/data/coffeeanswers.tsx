@@ -125,7 +125,7 @@ export const coffees = {
             attributes: [
                 "dark roast",
                 "medium roast",
-                "stone fruit",
+                "stonefruit",
                 "milk chocolate",
                 "decaf"
             ]
@@ -148,7 +148,7 @@ export const coffees = {
                 "light roast",
                 "medium roast",
                 "tropical",
-                "stone fruit",
+                "stonefruit",
                 "berries",
                 "milk chocolate",
                 "caffinated"
@@ -194,10 +194,8 @@ export const coffees = {
             attributes: [
                 "dark roast",
                 "caffinated",
-                "woman owned",
                 "dark chocolate",
                 "woman owned",
-                "caffinated"
             ]
         },
         {
@@ -227,7 +225,7 @@ export const coffees = {
             attributes: [
                 "dark roast",
                 "dried fruit",
-                "stone fruit",
+                "stonefruit",
                 "caffinated",
                 "woman owned"
             ]

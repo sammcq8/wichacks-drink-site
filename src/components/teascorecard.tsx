@@ -86,7 +86,6 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
                         Restart
                     </button>
                     </div>
-                </div>
                 {
                     selectedAnswer !== null &&
                         <div className={styles.card}>
@@ -101,7 +100,8 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
                             Tip - For a stronger brew, add more loose leaf tea rather than steeping longer! 
                         </div>
                 }
-                
+                </div>
+
             </div>
         </>
     );

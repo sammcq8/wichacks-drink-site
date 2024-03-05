@@ -17,48 +17,48 @@ export const teas = {
         {
             "name": "Paris",
             "link": "https://www.harney.com/products/paris-tea?refSrc=4115743244359&nosto=productpage-nosto-1&variant=1339699855366",
-            "attributes": ["Black", "Fruit", "Hot", "Iced", "High"],
+            "attributes": ["Black", "Fruit", "High"],
             "temp": 212,
             "duration": "4 to 5"
         },
         {
             "name": "Sally's Secret ", "link": "https://www.harney.com/products/sally-s-secret?variant=35000670214",
-            "attributes": ["Black", "Oolong", "Hot", "Floral", "High"],
+            "attributes": ["Black", "Oolong", "Floral", "High"],
             "temp": 212,
             "duration": "4 to 5"
         },
         {
             "name": "Peach's and Ginger (Decaf)",
             "link": "https: //www.harney.com/products/decaf-peaches-ginger ",
-            "attributes": ["Black", "Fruit", "Spice", "Hot", "Iced", "Caffeine Free"],
+            "attributes": ["Black", "Fruit", "Spice", "Caffeine Free"],
             "temp": 212,
             "duration": "5"
         },
         {
             "name": "Midsummer's Peach (Decaf)",
             "link": "https: //www.harney.com/products/midsummer-s-peach?variant=35000193670",
-            "attributes": ["Black", "Fruit", "Hot", "Iced", "Caffeine Free"],
+            "attributes": ["Black", "Fruit", "Caffeine Free"],
             "temp": 212,
             "duration": "5"
         },
         {
             "name": "Heirloom Bartlett Pear",
             "link": "https://www.harney.com/products/heirloom-bartlett-pear?variant=953250250758",
-            "attributes": ["White", "Fruit", "Spice", "Low to Medium", "Hot" ],
+            "attributes": ["White", "Fruit", "Spice", "Low to Medium" ],
             "temp": 175,
             "duration": "4 to 5"
         },
         {
             "name": "Winter White Earl Grey",
             "link": "https://www.harney.com/products/winter-White-earl-grey?variant=35000606726",
-            "attributes": ["White", "Vegetal", "Low to Medium", "Hot"],
+            "attributes": ["White", "Vegetal", "Low to Medium"],
             "temp": 175,
             "duration": "3"
         },
         {
             "name": "Dragon Pearl Jasmine",
             "link": "https://www.harney.com/products/dragon-pearl-jasmine?refSrc=8584033094&nosto=productpage-nosto-1-copy-copy-1&variant=1339389870086",
-            "attributes": ["Green", "White", "Floral", "Hot", "Low to Medium"],
+            "attributes": ["Green", "White", "Floral", "Low to Medium"],
             "temp": 175,
             "duration": "3"
         },
@@ -121,21 +121,21 @@ export const teas = {
         {
             "name": "Mother's Day",
             "link": "https://www.harney.com/products/mothers-day-1?variant=39321604948039",
-            "attributes": ["Floral", "Caffeine Free"],
+            "attributes": ["Herbal", "Floral", "Caffeine Free"],
             "temp": 212,
             "duration": "5"
         },
         {
             "name": "Mulled Plum Cider",
             "link": "https://www.harney.com/products/mulled-plum-cider?variant=946942017542",
-            "attributes": ["Fruit", "Spice", "Caffeine Free"],
+            "attributes": ["Herbal", "Fruit", "Spice", "Caffeine Free"],
             "temp": 208,
             "duration": "5"
         },
         {
             "name": "Greek Mountain Herb",
             "link": "https://www.harney.com/products/greek-mountain-herb",
-            "attributes": ["Vegetal", "Caffeine Free"],
+            "attributes": ["Herbal", "Vegetal", "Caffeine Free"],
             "temp": 212,
             "duration": "5"
         }

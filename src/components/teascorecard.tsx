@@ -45,8 +45,8 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
                 <br/>
                 
                 {quizResult.attributes.map((attribute, idx) =>{
-                    if(attribute === "Herbal"){
-                        return <p key="decafRec">You said you like herbal tea! Did you know herbal tea is naturally caffiene free?
+                    if(attribute === "Caffeine Free"){
+                        return <p key="decafRec">You said you like caffeine free tea! Did you know most herbal teas are naturally caffeine free?
                         </p>
                     }
                 })}

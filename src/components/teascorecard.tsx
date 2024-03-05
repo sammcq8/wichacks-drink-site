@@ -17,7 +17,7 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
     const compareTeas = (tea: { name: string; attributes: string[]; link?: undefined; } | { name: string; link: string; attributes: string[]; }, result:any) => {
         let intersection = 0
         tea.attributes.forEach((tea) =>
-            result.attributes.forEach((result) =>{if(tea == result){intersection++;}})
+            result.attributes.forEach((result) =>{if(tea.toLowerCase() == result.toLowerCase()){intersection++;}})
         )
         if (intersection >= 2) {
             return true

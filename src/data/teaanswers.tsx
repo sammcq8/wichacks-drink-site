@@ -22,7 +22,7 @@ export const teas = {
             "duration": "4 to 5"
         },
         {
-            "name": "sally's Secret ", "link": "https://www.harney.com/products/sally-s-secret?variant=35000670214",
+            "name": "Sally's Secret ", "link": "https://www.harney.com/products/sally-s-secret?variant=35000670214",
             "attributes": ["Black", "Oolong", "Hot", "Floral", "High"],
             "temp": 212,
             "duration": "4 to 5"
@@ -30,14 +30,14 @@ export const teas = {
         {
             "name": "Peach's and Ginger (Decaf)",
             "link": "https: //www.harney.com/products/decaf-peaches-ginger ",
-            "attributes": ["Black", "Fruit", "Spice", "Hot", "Iced", "Caffiene Free"],
+            "attributes": ["Black", "Fruit", "Spice", "Hot", "Iced", "Caffeine Free"],
             "temp": 212,
             "duration": "5"
         },
         {
             "name": "Midsummer's Peach (Decaf)",
             "link": "https: //www.harney.com/products/midsummer-s-peach?variant=35000193670",
-            "attributes": ["Black", "Fruit", "Hot", "Iced", "Caffiene Free"],
+            "attributes": ["Black", "Fruit", "Hot", "Iced", "Caffeine Free"],
             "temp": 212,
             "duration": "5"
         },
@@ -121,21 +121,21 @@ export const teas = {
         {
             "name": "Mother's Day",
             "link": "https://www.harney.com/products/mothers-day-1?variant=39321604948039",
-            "attributes": ["Floral", "Caffiene Free"],
+            "attributes": ["Floral", "Caffeine Free"],
             "temp": 212,
             "duration": "5"
         },
         {
             "name": "Mulled Plum Cider",
             "link": "https://www.harney.com/products/mulled-plum-cider?variant=946942017542",
-            "attributes": ["Fruit", "Spice", "Caffiene Free"],
+            "attributes": ["Fruit", "Spice", "Caffeine Free"],
             "temp": 208,
             "duration": "5"
         },
         {
             "name": "Greek Mountain Herb",
             "link": "https://www.harney.com/products/greek-mountain-herb",
-            "attributes": ["Vegetal", "Caffiene Free"],
+            "attributes": ["Vegetal", "Caffeine Free"],
             "temp": 212,
             "duration": "5"
         }

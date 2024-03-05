@@ -14,7 +14,7 @@ export default function Home() {
 
                 <h1 className='text-success mtb-1 '>
                 </h1>
-                <h3 className='mb-4'>Quiz App</h3>
+                <h3 className='mb-4'>SipSage Tea Quiz</h3>
             </div>
 
             {quizStarted ? (

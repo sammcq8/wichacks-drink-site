@@ -2011,19 +2011,6 @@ pre code {
     background-color: #ececf6
 }
 
-.table-dark,
-.table-dark>td,
-.table-dark>th {
-    background-color: #c6c8ca
-}
-
-.table-dark tbody+tbody,
-.table-dark td,
-.table-dark th,
-.table-dark thead th {
-    border-color: #95999c
-}
-
 .table-hover .table-dark:hover {
     background-color: #b9bbbe
 }
@@ -2048,40 +2035,10 @@ pre code {
     background-color: rgba(0, 0, 0, .075)
 }
 
-.table .thead-dark th {
-    color: #fff;
-    background-color: #343a40;
-    border-color: #454d55
-}
-
 .table .thead-light th {
     color: #5a5a5a;
     background-color: #f7f7f9;
     border-color: #eceeef
-}
-
-.table-dark {
-    color: #fff;
-    background-color: #343a40
-}
-
-.table-dark td,
-.table-dark th,
-.table-dark thead th {
-    border-color: #454d55
-}
-
-.table-dark.table-bordered {
-    border: 0
-}
-
-.table-dark.table-striped tbody tr:nth-of-type(odd) {
-    background-color: rgba(255, 255, 255, .05)
-}
-
-.table-dark.table-hover tbody tr:hover {
-    color: #fff;
-    background-color: rgba(255, 255, 255, .075)
 }
 
 @media (max-width:575.98px) {
@@ -2967,48 +2924,6 @@ fieldset:disabled a.btn {
 .show>.btn-light.dropdown-toggle:focus {
     box-shadow: 0 0 0 .2rem rgba(216, 217, 219, .5)
 }
-
-.btn-dark {
-    color: #fff;
-    background-color: #343a40;
-    border-color: #343a40
-}
-
-.btn-dark:hover {
-    color: #fff;
-    background-color: #23272b;
-    border-color: #1d2124
-}
-
-.btn-dark.focus,
-.btn-dark:focus {
-    color: #fff;
-    background-color: #23272b;
-    border-color: #1d2124;
-    box-shadow: 0 0 0 .2rem rgba(82, 88, 93, .5)
-}
-
-.btn-dark.disabled,
-.btn-dark:disabled {
-    color: #fff;
-    background-color: #343a40;
-    border-color: #343a40
-}
-
-.btn-dark:not(:disabled):not(.disabled).active,
-.btn-dark:not(:disabled):not(.disabled):active,
-.show>.btn-dark.dropdown-toggle {
-    color: #fff;
-    background-color: #1d2124;
-    border-color: #171a1d
-}
-
-.btn-dark:not(:disabled):not(.disabled).active:focus,
-.btn-dark:not(:disabled):not(.disabled):active:focus,
-.show>.btn-dark.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem rgba(82, 88, 93, .5)
-}
-
 .btn-outline-primary {
     color: #78c2ad;
     border-color: #78c2ad
@@ -10853,9 +10768,6 @@ a.text-dark:hover {
     }
 }
 
-.bg-dark {
-    background-color: #f3969a !important
-}
 
 .border-dark {
     border-color: #f3969a !important

@@ -1,7 +1,7 @@
 // ScoreCard.js
 import React from 'react';
 import { coffees } from '@/data/coffeeanswers';
-import { deleteCookie, getCookie } from 'cookies-next';
+import { deleteCookie, getCookie, setCookie } from 'cookies-next';
 import styles from "../app/page.module.css";
 import { useState } from 'react';
 
@@ -13,6 +13,7 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [answerChecked, setAnswerChecked] = useState(false);
     const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
+    setCookie("coffeeAttributes", quizResult)
 
     const compareCoffees = (coffee: { name: string; attributes: string[]; link?: undefined; } | { name: string; link: string; attributes: string[]; }, result:any) => {
         let intersection = 0
@@ -35,42 +36,35 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
 
     const womanOwned = (attributes:String[]) => {return attributes.filter(attribute => attribute === "woman owned").length > 0}
 
-    const getActiveItem = (bev:any, idx:number) => {
+    const getItem = (bev: any, idx: number, active:boolean) => {
+        let activeString = active ? 'active': ''
         return <li key={idx}
             onClick={() => onAnswerSelected(bev, idx)}
             className={
-                'list-group-item active cursor-pointer'
+                'list-group-item '+activeString+' cursor-pointer'
             }>
-            <p ><a className={"text-" + (womanOwned(bev.attributes) && selectedAnswerIndex !== idx ? 'secondary' : 'dark')} href={bev.link}>{(womanOwned(bev.attributes) ? '*** ' : '') + bev.name}</a></p>
+            <p >
+                <a className={"text-" + (womanOwned(bev.attributes) && selectedAnswerIndex !== idx ? 'secondary' : 'dark')} 
+                    href={bev.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                        {(womanOwned(bev.attributes) ? '*** ' : '') + bev.name}
+                </a>
+            </p>
             <p > {bev.attributes.map((attribute: any) => attribute + ", ")}</p>
         </li>
-
-    }
-
-    const getNonActiveItem = (bev: any, idx: number) => {
-        return <li key={idx}
-            onClick={() => onAnswerSelected(bev, idx)}
-            className={
-                'list-group-item cursor-pointer'
-            }>
-            <p ><a className={"text-" + (womanOwned(bev.attributes) && selectedAnswerIndex !== idx ? 'secondary' : 'dark')} href={bev.link}>{(womanOwned(bev.attributes) ? '*** ' : '') + bev.name}</a></p>
-            <p > {bev.attributes.map((attribute: any) => attribute + ", ")}</p>
-        </li>
-
     }
 
     return (
         <>
             <div>
-                <h3>Hello, {name}. You said you liked:</h3>
+                <h3>Hello, {getCookie("name")}. You said you liked:</h3>
 
                 <p>{quizResult.attributes.map((answer: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined, idx: string) => (
                     answer + ", "
                 ))}</p>
-                <br/>
-                <br/>
                 
-                {quizResult.attributes.map((attribute, idx) =>{
+                {quizResult.attributes.map((attribute:string, idx:number) =>{
                     if(attribute === "Decaf"){
                         return <p key="decafRec">You said you like decaf coffee! Did you know decaf coffee goes stale faster than caffinated coffee?
                             If you store your coffee in the freezer it will last much longer
@@ -84,10 +78,12 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
                     <table className='table'>
 
                         <tbody>
-                            {coffees.coffees.sort(coffee => womanOwned(coffee.attributes) ? 0:3)
+                            {coffees.coffees
+                                    .sort(coffee => womanOwned(coffee.attributes) ? 0:3)
                                     .map((coffee, idx) => 
                                         compareCoffees(coffee, quizResult) ? 
-                                        (selectedAnswerIndex === idx ? getActiveItem(coffee, idx) : getNonActiveItem(coffee, idx)) : null)
+                                        getItem(coffee, idx, selectedAnswerIndex === idx) : null
+                                    )
                             }                       
                         </tbody>
                     </table>

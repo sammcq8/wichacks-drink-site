@@ -35,6 +35,26 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
 
     const womanOwned = (attributes) => {return attributes.filter(attribute => attribute === "Woman Owned").length > 0}
 
+    const getItem = (bev: any, idx: number, active: boolean) => {
+        let activeString = active ? 'active' : ''
+        return <li key={idx}
+            onClick={() => onAnswerSelected(bev, idx)}
+            className={
+                'list-group-item ' + activeString + ' cursor-pointer'
+            }>
+            <p >
+                <a className={"text-" + (womanOwned(bev.attributes) && selectedAnswerIndex !== idx ? 'secondary' : 'dark')}
+                    href={bev.link}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    {(womanOwned(bev.attributes) ? '*** ' : '') + bev.name}
+                </a>
+            </p>
+            <p > {bev.attributes.map((attribute: any) => attribute + ", ")}</p>
+        </li>
+    }
+
+
     return (
         <>
             <div >
@@ -59,27 +79,13 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
                     <table className='table'>
 
                         <tbody>
-                            {teas.teas.sort( tea => {if(womanOwned(tea.attributes)){return 0}else{return 1}}).map((tea, idx) => {
-                                if (compareTeas(tea, quizResult)){
-                                    return (
-                                        <li key={idx}
-                                            onClick={() => onAnswerSelected(tea, idx)}
-                                            className={
-                                                'list-group-item ' +
-                                                (selectedAnswerIndex ===
-                                                    idx ? 'active' : '') +
-                                                ' cursor-pointer'
-                                            }>
-                                            <p><a
-                                                className={"text-" + (womanOwned(tea.attributes) && selectedAnswerIndex !== idx ? 'secondary' : 'dark')}
-                                                href={tea.link}>{(womanOwned(tea.attributes) ? '*** ' : '') + tea.name}</a>
-                                            </p>
-                                            <p>{tea.attributes.map(tea => tea + ", ")}</p>
-                                        </li>)
-                                } else {
-                                    return 
-                                }
-                            } )}
+                                {teas.teas
+                                    .sort(tea => womanOwned(tea.attributes) ? 0 : 3)
+                                    .map((tea, idx) =>
+                                        compareTeas(tea, quizResult) ?
+                                            getItem(tea, idx, selectedAnswerIndex === idx) : null
+                                    )
+                                } 
                         </tbody>
                     </table>
 

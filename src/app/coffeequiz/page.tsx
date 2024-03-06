@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Quiz from "../../components/quiz";
 import { setCookie } from "cookies-next";
+import Link from "next/link";
 
 export default function Home() {
     const [quizStarted, setQuizStarted] = useState(false);
@@ -14,7 +15,8 @@ export default function Home() {
 
                 <h1 className='text-success mtb-1 '>
                 </h1>
-                <h3 className='mb-4'>SipSage Coffee Quiz</h3>
+                <h1 className='mb-4'><Link href="/">SipSage</Link></h1>
+                <h3>Coffee Quiz</h3>
             </div>
 
             {quizStarted ? (

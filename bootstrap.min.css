@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Merienda:wght@300..900&display=swap');
 
 :root {
     --blue: #007bff;
@@ -84,6 +84,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: "Glass Antiqua";
     margin-top: 0;
     margin-bottom: .5rem
 }
@@ -381,17 +382,17 @@ h6 {
 
 .h1,
 h1 {
-    font-size: 2.5rem
+    font-size: 4rem
 }
 
 .h2,
 h2 {
-    font-size: 2rem
+    font-size: 3.5rem
 }
 
 .h3,
 h3 {
-    font-size: 1.75rem
+    font-size: 2.75rem
 }
 
 .h4,

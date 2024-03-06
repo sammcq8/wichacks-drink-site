@@ -4,7 +4,7 @@ export const quiz = {
         {
             id: 1,
             question: 'What caffiene level are you looking for?',
-            answers: ['Decaf', 'Caffinated'],
+            answers: ['Decaf', 'Caffeinated'],
         },
 
         {

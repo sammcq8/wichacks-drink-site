@@ -93,7 +93,7 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
                 
                 {
                     selectedAnswer !== null &&
-                    <div className='card p-4'>
+                    <div>
                         <h4>Pour over instructions:</h4>
                         <ol>
                             <li>Bring at least 600 grams (20 oz) of water to a boil.</li>

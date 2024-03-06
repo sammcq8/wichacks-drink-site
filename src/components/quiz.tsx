@@ -5,11 +5,6 @@ import { quiz } from '../data/coffeequestionset';
 import CoffeeScoreCard from './coffeescorecard';
 import { setCookie, getCookie, CookieValueTypes } from "cookies-next";
 
-function useCookieState() {
-
-
-}
-
 const Quiz = ({ name:string }) => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState('');

@@ -15,7 +15,7 @@ export const quiz = {
         {
             id: 3,
             question: 'What flavor note sounds most interesting?',
-            answers: ['Vegetal', 'Fruit', 'Floral','Spice'],
+            answers: ['Vegetal', 'Fruity', 'Floral','Spicy'],
         },
     ],
 };

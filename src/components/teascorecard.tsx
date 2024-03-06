@@ -33,6 +33,8 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
         setAnswerChecked(true);
     };
 
+    const womanOwned = (attributes) => {return attributes.filter(attribute => attribute === "Woman Owned").length > 0}
+
     return (
         <>
             <div >
@@ -57,7 +59,7 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
                     <table className='table'>
 
                         <tbody>
-                            {teas.teas.map((tea, idx) => {
+                            {teas.teas.sort( tea => {if(womanOwned(tea.attributes)){return 0}else{return 1}}).map((tea, idx) => {
                                 if (compareTeas(tea, quizResult)){
                                     return (
                                         <li key={idx}
@@ -68,11 +70,13 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
                                                     idx ? 'active' : '') +
                                                 ' cursor-pointer'
                                             }>
-                                            <p ><a className="text-dark" href={tea.link}>{tea.name}</a></p>
-                                            <p >{tea.attributes.map(tea => tea + ", ")}</p>
+                                            <p><a
+                                                className={"text-" + (womanOwned(tea.attributes) && selectedAnswerIndex !== idx ? 'secondary' : 'dark')}
+                                                href={tea.link}>{(womanOwned(tea.attributes) ? '*** ' : '') + tea.name}</a>
+                                            </p>
+                                            <p>{tea.attributes.map(tea => tea + ", ")}</p>
                                         </li>)
-                                }
-                                else{
+                                } else {
                                     return 
                                 }
                             } )}

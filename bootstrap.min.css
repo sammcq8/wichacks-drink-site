@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
 
 :root {
     --blue: #007bff;
@@ -84,6 +84,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: "Merienda";
     margin-top: 0;
     margin-bottom: .5rem
 }

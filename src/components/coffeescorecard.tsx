@@ -1,7 +1,7 @@
 // ScoreCard.js
 import React from 'react';
 import { coffees } from '@/data/coffeeanswers';
-import { deleteCookie, getCookie } from 'cookies-next';
+import { deleteCookie, getCookie, setCookie } from 'cookies-next';
 import styles from "../app/page.module.css";
 import { useState } from 'react';
 
@@ -13,6 +13,7 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [answerChecked, setAnswerChecked] = useState(false);
     const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
+    setCookie("coffeeAttributes", quizResult)
 
     const compareCoffees = (coffee: { name: string; attributes: string[]; link?: undefined; } | { name: string; link: string; attributes: string[]; }, result:any) => {
         let intersection = 0
@@ -57,7 +58,7 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
     return (
         <>
             <div>
-                <h3>Hello, {name}. You said you liked:</h3>
+                <h3>Hello, {getCookie("name")}. You said you liked:</h3>
 
                 <p>{quizResult.attributes.map((answer: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined, idx: string) => (
                     answer + ", "

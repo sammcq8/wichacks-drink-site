@@ -55,7 +55,6 @@ const Quiz = ({ name:string }) => {
 
     return (
         <div className='container mt-5'>
-            {cookieToArray(cookie)}
             <div>
                 {!showResults ? (
                     <div className='card p-4'>

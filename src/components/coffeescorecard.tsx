@@ -61,7 +61,7 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
 
     return (
         <>
-            <div className={styles.main}>
+            <div>
                 <h3>Hello, {name}. You said you liked:</h3>
 
                 <p>{quizResult.attributes.map((answer: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined, idx: string) => (
@@ -79,7 +79,7 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
                 })}
                 
                 <div className={styles.grid}>
-                    <div className='card p-4'>
+                    <div className={styles.card}>
                         <h3>We Think You&apos;ll Love These Coffees:</h3>
                     <table className='table'>
 

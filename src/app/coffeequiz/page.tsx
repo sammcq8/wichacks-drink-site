@@ -9,7 +9,7 @@ export default function Home() {
     const [name, setName] = useState('');
 
     return (
-        <div>
+        <div className="container mt-5 ml-5">
             <div className="text-center">
 
                 <h1 className='text-success mtb-1 '>

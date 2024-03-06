@@ -55,7 +55,7 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
                 
                 <div className={styles.grid}>
                     <div className={styles.card}>
-                    <h3>We Recommend These Teas:</h3>
+                        <h3>We Think You&apos;ll Love These Teas:</h3>
                     <table className='table'>
 
                         <tbody>

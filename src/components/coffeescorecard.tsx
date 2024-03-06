@@ -1,7 +1,7 @@
 // ScoreCard.js
 import React from 'react';
 import { coffees } from '@/data/coffeeanswers';
-import { getCookie } from 'cookies-next';
+import { getCookie, setCookie } from 'cookies-next';
 import styles from "../app/page.module.css";
 import { useState } from 'react';
 
@@ -84,7 +84,8 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
                     </table>
 
                     <button
-                        onClick={() => window.location.reload()}
+                        onClick={() => {window.location.reload()
+                                setCookie("coffeeAttributes", null)}}
                         className='btn btn-primary mt-3'
                     >
                         Restart

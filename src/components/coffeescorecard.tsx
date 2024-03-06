@@ -20,12 +20,7 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
         coffee.attributes.forEach((coffee) =>
             result.attributes.forEach((result) =>{if(coffee.toLowerCase() == result.toLowerCase()){intersection++;}})
         )
-        if (intersection >= 3) {
-            return true
-        }
-        else{
-            return false
-        }
+       return intersection;
     }
 
     const onAnswerSelected = (answer:any, idx:any) => {
@@ -58,7 +53,7 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
     return (
         <>
             <div>
-                <h3>Hello, {getCookie("name")}. You said you liked:</h3>
+                <h3>Hi {getCookie("name")}! You said you liked:</h3>
 
                 <p>{quizResult.attributes.map((answer: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined, idx: string) => (
                     answer + ", "
@@ -75,18 +70,17 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
                 <div className={styles.grid}>
                     <div className={styles.card}>
                         <h3>We Think You&apos;ll Love These Coffees:</h3>
-                    <table className='table'>
+                    <div className='table'>
 
-                        <tbody>
+                        <div>
                             {coffees.coffees
-                                    .sort(coffee => womanOwned(coffee.attributes) ? 0:3)
-                                    .map((coffee, idx) => 
-                                        compareCoffees(coffee, quizResult) ? 
-                                        getItem(coffee, idx, selectedAnswerIndex === idx) : null
-                                    )
+                                    .filter(coffee => compareCoffees(coffee, quizResult) >= 3 )
+                                    .sort((coffeeA, coffeeB) => (compareCoffees(coffeeA, quizResult) + (womanOwned(coffeeA.attributes) ? 0 : 3)) -
+                                        (compareCoffees(coffeeB, quizResult) + (womanOwned(coffeeB.attributes) ? 0 : 3)))
+                                    .map((coffee, idx) => getItem(coffee, idx, selectedAnswerIndex === idx))
                             }                       
-                        </tbody>
-                    </table>
+                        </div>
+                    </div>
 
                     <button
                         onClick={() => {window.location.reload()

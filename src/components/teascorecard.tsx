@@ -17,14 +17,9 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
     const compareTeas = (tea: { name: string; attributes: string[]; link?: undefined; } | { name: string; link: string; attributes: string[]; }, result:any) => {
         let intersection = 0
         tea.attributes.forEach((tea) =>
-            result.attributes.forEach((result) =>{if(tea.toLowerCase() == result.toLowerCase()){intersection++;}})
+            result.attributes.forEach((result:string) =>{if(tea.toLowerCase() == result.toLowerCase()){intersection++;}})
         )
-        if (intersection >= 2) {
-            return true
-        }
-        else{
-            return false
-        }
+        return intersection
     }
 
     const onAnswerSelected = (answer, idx) => {
@@ -33,7 +28,7 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
         setAnswerChecked(true);
     };
 
-    const womanOwned = (attributes) => {return attributes.filter(attribute => attribute === "Woman Owned").length > 0}
+    const womanOwned = (attributes:string[]) => {return attributes.filter(attribute => attribute === "Woman Owned").length > 0}
 
     const getItem = (bev: any, idx: number, active: boolean) => {
         let activeString = active ? 'active' : ''
@@ -58,7 +53,7 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
     return (
         <>
             <div >
-                <h3>Hello, {name}. You said you liked:</h3>
+                <h3>Hi {name}! You said you liked:</h3>
 
                 <p>{quizResult.attributes.map((answer: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined, idx: string) => (
                     answer + ", "
@@ -66,7 +61,7 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
                 <br/>
                 <br/>
                 
-                {quizResult.attributes.map((attribute, idx) =>{
+                {quizResult.attributes.map((attribute:string, idx:number) =>{
                     if(attribute === "Caffeine Free"){
                         return <p key="decafRec">You said you like caffeine free tea! Did you know most herbal teas are naturally caffeine free?
                         </p>
@@ -80,11 +75,10 @@ const TeaScoreCard = ({ quizResult, questions, name }) => {
 
                         <tbody>
                                 {teas.teas
-                                    .sort(tea => womanOwned(tea.attributes) ? 0 : 3)
-                                    .map((tea, idx) =>
-                                        compareTeas(tea, quizResult) ?
-                                            getItem(tea, idx, selectedAnswerIndex === idx) : null
-                                    )
+                                    .filter(tea => compareTeas(tea, quizResult) >=2)
+                                    .sort((teaA, teaB) => (compareTeas(teaA, quizResult)  + (womanOwned(teaA.attributes) ? 0 : 3)) - 
+                                                          (compareTeas(teaB, quizResult) + (womanOwned(teaB.attributes) ? 0 : 3)))
+                                    .map((tea, idx) => getItem(tea, idx, selectedAnswerIndex === idx))
                                 } 
                         </tbody>
                     </table>

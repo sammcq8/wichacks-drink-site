@@ -1,7 +1,7 @@
 // ScoreCard.js
 import React from 'react';
 import { coffees } from '@/data/coffeeanswers';
-import { getCookie } from 'cookies-next';
+import { deleteCookie, getCookie } from 'cookies-next';
 import styles from "../app/page.module.css";
 import { useState } from 'react';
 
@@ -27,17 +27,41 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
         }
     }
 
-    const onAnswerSelected = (answer, idx) => {
+    const onAnswerSelected = (answer:any, idx:any) => {
         setSelectedAnswerIndex(idx);
         setSelectedAnswer(answer);
         setAnswerChecked(true);
     };
 
-    const womanOwned = (attributes) => {return attributes.filter(attribute => attribute === "woman owned").length > 0}
+    const womanOwned = (attributes:String[]) => {return attributes.filter(attribute => attribute === "woman owned").length > 0}
+
+    const getActiveItem = (bev:any, idx:number) => {
+        return <li key={idx}
+            onClick={() => onAnswerSelected(bev, idx)}
+            className={
+                'list-group-item active cursor-pointer'
+            }>
+            <p ><a className={"text-" + (womanOwned(bev.attributes) && selectedAnswerIndex !== idx ? 'secondary' : 'dark')} href={bev.link}>{(womanOwned(bev.attributes) ? '*** ' : '') + bev.name}</a></p>
+            <p > {bev.attributes.map((attribute: any) => attribute + ", ")}</p>
+        </li>
+
+    }
+
+    const getNonActiveItem = (bev: any, idx: number) => {
+        return <li key={idx}
+            onClick={() => onAnswerSelected(bev, idx)}
+            className={
+                'list-group-item cursor-pointer'
+            }>
+            <p ><a className={"text-" + (womanOwned(bev.attributes) && selectedAnswerIndex !== idx ? 'secondary' : 'dark')} href={bev.link}>{(womanOwned(bev.attributes) ? '*** ' : '') + bev.name}</a></p>
+            <p > {bev.attributes.map((attribute: any) => attribute + ", ")}</p>
+        </li>
+
+    }
 
     return (
         <>
-            <div >
+            <div className={styles.main}>
                 <h3>Hello, {name}. You said you liked:</h3>
 
                 <p>{quizResult.attributes.map((answer: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined, idx: string) => (
@@ -56,35 +80,21 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
                 
                 <div className={styles.grid}>
                     <div className='card p-4'>
-                    <h3>We Recommend These Coffees:</h3>
+                        <h3>We Think You&apos;ll Love These Coffees:</h3>
                     <table className='table'>
 
                         <tbody>
-                            {coffees.coffees.sort(coffee => {if(womanOwned(coffee.attributes)){return 0}
-                            else{return 3}} ).map((coffee, idx) => {
-                                if (compareCoffees(coffee, quizResult)){
-                                    return (
-                                        <li key={idx}
-                                            onClick={() => onAnswerSelected(coffee, idx)}
-                                            className={
-                                                'list-group-item ' +
-                                                (selectedAnswerIndex ===
-                                                    idx ? 'active' : '')  +
-                                                ' cursor-pointer'
-                                            }>
-                                            <p ><a className={"text-" + (womanOwned(coffee.attributes) && selectedAnswerIndex !== idx ? 'secondary' : 'dark')} href={coffee.link}>{(womanOwned(coffee.attributes) ? '*** ' : '') + coffee.name}</a></p>
-                                            <p > {coffee.attributes.map(coffee => coffee + ", ")}</p>
-                                        </li>)
-                                }
-                                else{
-                                    return 
-                                }
-                            } )}
+                            {coffees.coffees.sort(coffee => womanOwned(coffee.attributes) ? 0:3)
+                                    .map((coffee, idx) => 
+                                        compareCoffees(coffee, quizResult) ? 
+                                        (selectedAnswerIndex === idx ? getActiveItem(coffee, idx) : getNonActiveItem(coffee, idx)) : null)
+                            }                       
                         </tbody>
                     </table>
 
                     <button
-                        onClick={() => window.location.reload()}
+                        onClick={() => {window.location.reload()
+                                        deleteCookie("coffeeAttributes")}}
                         className='btn btn-primary mt-3'
                     >
                         Restart
@@ -93,9 +103,9 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
                 
                 {
                     selectedAnswer !== null &&
-                    <div>
+                    <div className={styles.card}>
                         <h4>Pour over instructions:</h4>
-                        <ol>
+                        <ol >
                             <li>Bring at least 600 grams (20 oz) of water to a boil.</li>
                                 {"Light Roast" in selectedAnswer && <li>For Light Roasts measure out 22 grams for every 350 grams water.</li>}
                                 {"Light Roast"! in selectedAnswer.attributes && <li>For Medium and Dark Roasts measure out 30 grams of coffee</li>} 

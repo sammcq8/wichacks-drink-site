@@ -44,7 +44,7 @@ const Quiz = ({ name }) => {
     };
 
     return (
-        <div className='container mt-5'>
+        <div className='container'>
 
             <div>
                 {!showResults ? (

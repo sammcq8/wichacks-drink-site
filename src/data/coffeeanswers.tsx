@@ -1,32 +1,32 @@
 export const coffees = {
     coffees:[
         {
-            name: "Oren's Coffee Columbian",
+            name: "Oren's Coffee - Columbian",
             link:"https://www.drinktrade.com/products/colombian",
             attributes: ["Light Roast", "Fall Fruit", "White Chocolate", "Caffinated"]
         },
         {
-            name: "Good Citizen Palmera",
+            name: "Good Citizen - Palmera",
             link: "https://www.drinktrade.com/products/palmera-ohmwrcml",
             attributes: ["Light Roast", "Fall Fruit", "White Chocolate", "Caffinated"]
         },
         {
-            name: "City of Saints Santa María Colombia",
+            name: "City of Saints - Santa María Colombia",
             link: "https://www.drinktrade.com/products/santa-maria-colombia",
             attributes: ["Medium Roast", "Stonefruit", "Caramel", "Caffinated"]
         },
         {
-            name: "Gimme! Colombia Angel BBs",
-            link: "https://www.drinktrade.com/products/colombian",
+            name: "Gimme! - Colombia Angel BBs",
+            link: "https://www.drinktrade.com/products/colombia-angel-bbs",
             attributes: ["Milk Chocolate", "Vanilla", "Stonefruit", "Medium Roast", "White Chocolate", "Caffinated"]
         },
         {
-            name: "Irving Farm Monserrate",
+            name: "Irving Farm - Monserrate",
             link: "https://www.drinktrade.com/products/monserrate-kmporqpv",
             attributes: ["Dark Chocolate", "Medium Roast", "Dried Fruit", "Citrus", "Caffineated"]
         },
         {
-            name: "Portrait Darker the Cherry",
+            name: "Portrait - Darker the Cherry",
             link: "https: //www.drinktrade.com/products/darker-the-cherry?variant=standard_bag",
             attributes: [
                 "dark roast",
@@ -35,7 +35,7 @@ export const coffees = {
             ]
         },
         {
-            name: "DOMA Bella Luna",
+            name: "DOMA - Bella Luna",
             link: "https://www.drinktrade.com/products/bella-luna?variant=standard_bag",
             attributes: [
                 "dark roast",
@@ -44,7 +44,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Gimme! Eternal Flame",
+            name: "Gimme! - Eternal Flame",
             link: "https://www.drinktrade.com/products/eternal-flame?variant=standard_bag",
             attributes: [
                 "dark roast",
@@ -54,8 +54,8 @@ export const coffees = {
             ]
         },
         {
-            name: "Greater Goods Stimulate",
-            link: "https://www.drinktrade.com/products/tips-up-tahoe-french-roast?variant=standard_bag",
+            name: "Greater Goods - Stimulate",
+            link: "https://www.drinktrade.com/products/stimulate",
             attributes: [
                 "dark roast",
                 "milk chocolate",
@@ -64,7 +64,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Equator Decaf Kenya Thiriku",
+            name: "Equator - Decaf Kenya Thiriku",
             link: "https://www.drinktrade.com/products/decaf-kenya-thiriku?variant=standard_bag",
             attributes: [
                 "light roast",
@@ -75,7 +75,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Highwire After Hours Decaf",
+            name: "Highwire - After Hours Decaf",
             link: "https://www.drinktrade.com/products/after-hours?variant=standard_bag",
             attributes: [
                 "light roast",
@@ -86,7 +86,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Common Voice\nPerennial Decaf",
+            name: "Common Voice - Perennial Decaf",
             link: "https://www.drinktrade.com/products/perennial-decaf?variant=standard_bag",
             attributes: [
                 "light roast",
@@ -98,7 +98,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Boxcar Decaf Colombia E.A.",
+            name: "Boxcar - Decaf Colombia E.A.",
             link: "https://www.drinktrade.com/products/decaf-colombia-ea?variant=standard_bag",
             attributes: [
                 "light roast",
@@ -109,7 +109,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Irving Farm Decaf Blackstrap",
+            name: "Irving Farm - Decaf Blackstrap",
             link: "https://www.drinktrade.com/products/decaf-blackstrap?variant=standard_bag",
             attributes: [
                 "dark roast",
@@ -120,7 +120,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Atomic Daydream Decaf",
+            name: "Atomic - Daydream Decaf",
             link: "https://www.drinktrade.com/products/daydream-decaf?variant=standard_bag",
             attributes: [
                 "dark roast",
@@ -131,7 +131,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Cerberus Slowride Decaf",
+            name: "Cerberus - Slowride Decaf",
             link: "https://www.drinktrade.com/products/slowride-decaf?variant=standard_bag",
             attributes: [
                 "dark roast",
@@ -142,7 +142,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Huckleberry Ethiopia Basha Bekele Natural",
+            name: "Huckleberry - Ethiopia Basha Bekele Natural",
             link: "https://www.drinktrade.com/products/ethiopia-basha-bekele-natural?variant=standard_bag",
             attributes: [
                 "light roast",
@@ -155,7 +155,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Bean & Bean Costa Rica Las Lajas Black Honey",
+            name: "Bean & Bean - Costa Rica Las Lajas Black Honey",
             link: "https://www.drinktrade.com/products/costa-rica-las-lajas-black-honey-2?variant=standard_bag",
             attributes: [
                 "light roast",
@@ -168,7 +168,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Dune Colombia Gerson Mora",
+            name: "Dune Colombia - Gerson Mora",
             link: "https://www.drinktrade.com/products/colombia-gerson-mora?variant=standard_bag",
             attributes: [
                 "light roast",
@@ -179,7 +179,7 @@ export const coffees = {
             ]
         },
         {
-            name: "City Girl Sumatra",
+            name: "City Girl - Sumatra",
             link: "https://www.citygirlcoffee.com/buy-coffee/organic-sumatra",
             attributes: [
                 "dark roast",
@@ -189,7 +189,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Java Love Bad Ass Brew",
+            name: "Java Love - Bad Ass Brew",
             link: "https://javaloveroasters.com/products/bad-ass-brew",
             attributes: [
                 "dark roast",
@@ -199,7 +199,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Java Love Harvest Maple",
+            name: "Java Love - Harvest Maple",
             link: "https://javaloveroasters.com/products/harvest-maple",
             attributes: [
                 "dark roast",
@@ -209,7 +209,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Marigold Jam on Hawthorne",
+            name: "Marigold - Jam on Hawthorne",
             link: "https://marigoldcoffee.com/collections/blends/products/jam-on-hawthorne?variant=39333130928282",
             attributes: [
                 "dark roast",
@@ -220,7 +220,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Marigold Kaleidoscope",
+            name: "Marigold - Kaleidoscope",
             link: "https://marigoldcoffee.com/collections/blends/products/kaleidoscope-mosaic-blend?variant=39333114413210",
             attributes: [
                 "dark roast",
@@ -231,7 +231,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Cafecita Marcala",
+            name: "Cafecita - Marcala",
             link: "https://cafecitacoffee.com/products/marcala",
             attributes: [
                 "dark roast",
@@ -243,7 +243,7 @@ export const coffees = {
             ]
         },
         {
-            name: "Tico Roasters Black Tiger",
+            name: "Tico Roasters - Black Tiger",
             link: "https://www.ticoroasters.com/products/black-tiger?_pos=1&_fid=d27bb8800&_ss=c",
             attributes: [
                 "dark roast",

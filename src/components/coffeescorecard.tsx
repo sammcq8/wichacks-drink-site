@@ -67,8 +67,6 @@ const CoffeeScoreCard = ({ quizResult, questions, name }) => {
                 <p>{quizResult.attributes.map((answer: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined, idx: string) => (
                     answer + ", "
                 ))}</p>
-                <br/>
-                <br/>
                 
                 {quizResult.attributes.map((attribute, idx) =>{
                     if(attribute === "Decaf"){

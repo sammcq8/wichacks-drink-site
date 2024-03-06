@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import '../../bootstrap.min.css';
 import { quiz } from '../data/coffeequestionset';
 import CoffeeScoreCard from './coffeescorecard';
-import { getCookie, setCookie } from "cookies-next";
-import JSON
+import { setCookie } from "cookies-next";
 
 
 const Quiz = ({ name }) => {
@@ -13,20 +12,6 @@ const Quiz = ({ name }) => {
     const [answerChecked, setAnswerChecked] = useState(false);
     const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
     const [showResults, setShowResults] = useState(false);
-    
-    const parseCookie = () => {
-        let cookie = getCookie("coffeeAttributes")
-        console.log(cookie)
-        console.log("cookie")
-
-        if(cookie === null||cookie==undefined){
-            return null
-        }
-        else{
-            return JSON.parse(cookie)
-        }
-    }
-
     const [quizResult, setQuizResult] = useState({
         attributes: [],
     });
@@ -40,8 +25,6 @@ const Quiz = ({ name }) => {
         setSelectedAnswer(answer);
         setAnswerChecked(true);
     };
-
-    
 
     const handleNextQuestion = () => {
         setQuizResult((prev) => ({
@@ -62,7 +45,7 @@ const Quiz = ({ name }) => {
 
     return (
         <div className='container mt-5'>
-            {parseCookie()}
+
             <div>
                 {!showResults ? (
                     <div className='card p-4'>

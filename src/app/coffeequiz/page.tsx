@@ -16,7 +16,7 @@ export default function Home() {
                 <h1 className='text-success mtb-1 '>
                 </h1>
                 <h1 className='mb-4'><Link href="/">SipSage</Link></h1>
-                <h3>Tea Quiz</h3>
+                <h3>Coffee Quiz</h3>
             </div>
 
             {quizStarted ? (

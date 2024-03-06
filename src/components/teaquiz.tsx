@@ -8,9 +8,9 @@ import { setCookie } from "cookies-next";
 
 const Quiz = ({ name }) => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [selectedAnswer, setSelectedAnswer] = useState('');
+    const [selectedAnswer, setSelectedAnswer] = useState([]);
     const [answerChecked, setAnswerChecked] = useState(false);
-    const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
+    const [selectedAnswerIndex, setSelectedAnswerIndex] = useState([]);
     const [showResults, setShowResults] = useState(false);
     const [quizResult, setQuizResult] = useState({
         attributes: [],
@@ -20,16 +20,27 @@ const Quiz = ({ name }) => {
     const { question, answers } =
         questions[currentQuestionIndex];
 
-    const onAnswerSelected = (answer, idx) => {
-        setSelectedAnswerIndex(idx);
-        setSelectedAnswer(answer);
-        setAnswerChecked(true);
+    const onAnswerSelected = (answer:string, idx:number) => {
+        if(!selectedAnswerIndex.includes(idx)){
+            setSelectedAnswerIndex((prev:number[]) => [...prev, idx]);
+            setSelectedAnswer((prev:string[]) => [...prev, answer]);
+            setAnswerChecked(true);
+        }
+        else{
+            length = selectedAnswer.length
+            setSelectedAnswerIndex((prev: number[]) => prev.filter(item => item !== idx));
+            setSelectedAnswer((prev: string[]) => prev.filter(item => item !== answer));
+            setAnswerChecked(true);
+            if(length == 1){
+                setAnswerChecked(false)
+            }
+        }
     };
 
     const handleNextQuestion = () => {
         setQuizResult((prev) => ({
             ...prev,
-            attributes: [...prev.attributes, selectedAnswer]
+            attributes: [...prev.attributes, ...selectedAnswer]
         }));
         console.log(quizResult)
         if (currentQuestionIndex !== questions.length - 1) {
@@ -38,14 +49,13 @@ const Quiz = ({ name }) => {
             setShowResults(true);
             setCookie("teaAttributes", quizResult)
         }
-        setSelectedAnswer('');
-        setSelectedAnswerIndex(null);
+        setSelectedAnswer([]);
+        setSelectedAnswerIndex([]);
         setAnswerChecked(false);
     };
 
     return (
         <div className='container mt-5'>
-
             <div>
                 {!showResults ? (
                     <div className='card p-4'>
@@ -57,8 +67,7 @@ const Quiz = ({ name }) => {
                                     onClick={() => onAnswerSelected(answer, idx)}
                                     className={
                                         'list-group-item ' +
-                                        (selectedAnswerIndex ===
-                                            idx ? 'active' : '') +
+                                        (selectedAnswerIndex.includes(idx) ? 'active' : '') +
                                         ' cursor-pointer'
                                     }
                                 >

@@ -6,10 +6,7 @@ import styles from "../app/page.module.css";
 import { useState } from 'react';
 
 const TeaScoreCard = ({ quizResult, questions, name }) => {
-    const passPercentage = 60;
 
-    const percentage = (quizResult.score / (questions.length * 5)) * 100;
-    const status = percentage >= passPercentage ? 'Pass' : 'Fail';
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [answerChecked, setAnswerChecked] = useState(false);
     const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
